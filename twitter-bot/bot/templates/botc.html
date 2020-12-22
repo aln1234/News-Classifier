@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Twitter Bot</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+<style>
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+
+    }
+    input[type=text] {
+    width: 180px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+
+
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 50%;
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('{% static 'fonts/GothamBold.ttf' %}');
+
+  }
+  .button-bot {
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  padding: 20px 20px 20px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  color:black;
+  background-color: cadetblue;
+  text-align: center;
+  font-size: 15px;
+
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.button-bot span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+
+
+    </style>
+</head>
+<body id="bg" style="background-image: url('{% static "images/background.png" %}' )";>
+
+<font face="GothamBold">  <h3 align='middle' style="color:black;">Welcome to Twitter Bot</h3></font>
+  <font face="GothamBold"><p align='middle' style="font-size:20px;color:black;"></p>
+
+   
+
+<div class="middle"></font>
+
+  <br><br><font face="GothamBold">  <h3 align='middle' style="color:black;">LOREM IPSUM</h3></font><br><br><br><br>
+  
+ <form align='middle' method="post">
+      {% csrf_token %}
+
+
+
+
+<input type="text" name="Number" placeholder="TweetNumber">
+<input type="text" name="hashtag" placeholder="HashTag">
+<input type="text" name="reply" placeholder="Reply">
+<div>
+  <br><br><br>
+<input type="submit" name="generate" value="Monitor Now" class="button-bot" style="height: 60px;">
+<input type="submit" name="stop" value="STOP"  class="button-bot"  style="height: 60px;">
+</div>
+
+
+</form>
+<br><br><br>
+<br><br><br>
+
+<div class="container">
+  <a class="twitter-timeline" href="https://twitter.com/EverythingRedmi?ref_src=twsrc%5Etfw">Tweets by EverythingRedmi</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+
+
+
+
+
+{% comment %} 
+    <div style=" position: fixed;
+       text-align: center;
+
+       bottom: 20px;
+       width: 100%;">
+       <img src="{% static 'images/logo.png' %}" height="140px" width="280px" align="middle"/>
+
+    </div> {% endcomment %}
+  </div>
+</body>
+</html>

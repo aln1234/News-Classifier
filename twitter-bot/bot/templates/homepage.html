@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Twitter Bot</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+<style>
+  body{
+    font-family: 'GothamBold';
+    src: url('{% static 'fonts/GothamBold.ttf' %}');
+  }
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+
+    }
+    input[type=text] {
+    width: 180px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+
+
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 50%;
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('{% static 'fonts/GothamBold.ttf' %}');
+
+  }
+  .button-bot {
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  padding: 20px 20px 20px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  color:black;
+  background-color: cadetblue;
+  text-align: center;
+  font-size: 15px;
+
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.button-bot span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+
+
+    </style>
+</head>
+<body id="bg" style="background-image: url('{% static "images/background.png" %}' )";>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<font face="GothamBold">  <h3 align='middle' style="color:black;">Welcome to Twitter Bot</h3></font>
+  <font face="GothamBold"><p align='middle' style="font-size:20px;color:black;"></p>
+
+
+
+<div class="middle"></font>
+
+  <br>
+   {% comment %} <form action="" method="POST" id="bota">
+                        {% csrf_token %}
+                        
+                        <button  type="submit" class="btn btn-primary btn-lg btn-block btn-custom">Explore BOT A</button>
+                        <div class="forgt-pass-wrp">
+                            <!-- <a href="">Forgotten your password ?</a> -->
+                        </div>
+                     </form> {% endcomment %}
+ <form align='middle' method="POST">
+      {% csrf_token %}
+
+
+      <a href="{% url 'bota' %}" class="button-bot">EXPLORE BOT A</a>
+      <a href="{% url 'botb' %}" class="button-bot">EXPLORE BOT B</a>
+      <a href="{% url 'botc' %}" class="button-bot">EXPLORE BOT C</a>
+
+<!-- 
+<input type="submit" name="botb" value="EXPLORE BOT B"> -->
+
+
+
+
+
+</form> 
+<br><br><br>
+
+
+
+
+{% comment %} 
+    <div style=" position: fixed;
+       text-align: center;
+
+       bottom: 20px;
+       width: 100%;">
+       <img src="{% static 'images/logo.png' %}" height="140px" width="280px" align="middle"/>
+
+    </div> {% endcomment %}
+  </div>
+</body>
+</html>
